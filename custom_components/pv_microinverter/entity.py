@@ -27,7 +27,7 @@ class PVMicroinverterEntity(CoordinatorEntity[PVMicroinverterDataUpdateCoordinat
         super().__init__(coordinator)
         self._station_id = station_id
         self._sensor_type = sensor_type
-        self.entity_id = f"{DOMAIN}_{station_id}_{sensor_type}"
+        self.entity_id = f"sensor.{DOMAIN}_{station_id}_{sensor_type}"
         self._attr_unique_id = f"{DOMAIN}_{station_id}_{sensor_type}"
         self._attr_device_info = DeviceInfo(
             identifiers={(DOMAIN, station_id)},
