@@ -6,6 +6,6 @@
   "documentation": "https://github.com/AdrianoKF/home-assistant-envertech",
   "iot_class": "cloud_polling",
   "issue_tracker": "https://github.com/AdrianoKF/home-assistant-envertech/issues",
-  "version": "0.1.0",
-  "requirements": ["aiohttp>=3.8.4"]
+  "requirements": ["aiohttp>=3.8.4"],
+  "version": "0.1.0"
 }
