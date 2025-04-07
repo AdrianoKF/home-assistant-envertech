@@ -8,9 +8,8 @@ from typing import Any
 
 import aiohttp
 
-from pv_microinverter.units import WATT, Dimension
-
 from .const import PVMicroinverterData
+from .units import WATT, Dimension
 
 _LOGGER = logging.getLogger(__name__)
 
@@ -136,9 +135,9 @@ class PVMicroinverterApiClient:
             raise PVMicroinverterApiClientError(f"API error: {station_info.Result}")
 
         return PVMicroinverterData(
-            current_power=Dimension(station_data.Power, WATT),
-            today_energy=Dimension.parse(station_data.UnitEToday).to_base_unit(),
-            lifetime_energy=Dimension.parse(station_data.UnitETotal).to_base_unit(),
+            current_power=Dimension(station_data.Power, WATT).value,
+            today_energy=Dimension.parse(station_data.UnitEToday).value,
+            lifetime_energy=Dimension.parse(station_data.UnitETotal).value,
             last_updated=datetime.now().isoformat(),
         )
 

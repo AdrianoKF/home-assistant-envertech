@@ -37,7 +37,7 @@ async def async_setup_entry(
     coordinator: PVMicroinverterDataUpdateCoordinator = hass.data[DOMAIN][
         entry.entry_id
     ]
-    system_id = entry.data["system_id"]
+    system_id = entry.data.get("system_id")
 
     entities = []
 
