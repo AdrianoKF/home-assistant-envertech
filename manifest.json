@@ -1,0 +1,11 @@
+{
+  "domain": "pv_microinverter",
+  "name": "PV Microinverter",
+  "codeowners": ["@AdrianoKF"],
+  "config_flow": true,
+  "documentation": "https://git.rumpold-it.de/adriano/home-assistant-envertech",
+  "iot_class": "cloud_polling",
+  "issue_tracker": "https://git.rumpold-it.de/adriano/home-assistant-envertech/issues",
+  "version": "0.1.0",
+  "requirements": ["aiohttp>=3.8.4"]
+}
