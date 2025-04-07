@@ -61,7 +61,7 @@ class PVMicroinverterSensor(PVMicroinverterEntity, SensorEntity):
     def __init__(
         self,
         coordinator: PVMicroinverterDataUpdateCoordinator,
-        system_id: str,
+        system_id: dict[str, Any],
         sensor_type: str,
         sensor_info: dict[str, Any],
     ) -> None:
@@ -73,7 +73,7 @@ class PVMicroinverterSensor(PVMicroinverterEntity, SensorEntity):
             sensor_type: The sensor type
             sensor_info: The sensor information
         """
-        super().__init__(coordinator, system_id, sensor_type)
+        super().__init__(coordinator, system_id["station_id"], sensor_type)
 
         self._attr_name = sensor_info["name"]
         self._attr_icon = sensor_info["icon"]
