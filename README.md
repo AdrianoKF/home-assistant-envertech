@@ -78,10 +78,10 @@ This integration is licensed under the MIT License.
 
 ---
 
-[commits-shield]: https://img.shields.io/github/commit-activity/y/your-github-username/pv_microinverter.svg
-[commits]: https://github.com/your-github-username/pv_microinverter/commits/main
+[commits-shield]: https://img.shields.io/github/commit-activity/y/AdrianoKF/pv_microinverter.svg
+[commits]: https://github.com/AdrianoKF/pv_microinverter/commits/main
 [hacs-shield]: https://img.shields.io/badge/HACS-Custom-orange.svg
 [hacs]: https://github.com/hacs/integration
-[license-shield]: https://img.shields.io/github/license/your-github-username/pv_microinverter.svg
-[releases-shield]: https://img.shields.io/github/release/your-github-username/pv_microinverter.svg
-[releases]: https://github.com/your-github-username/pv_microinverter/releases
+[license-shield]: https://img.shields.io/github/license/AdrianoKF/pv_microinverter.svg
+[releases-shield]: https://img.shields.io/github/release/AdrianoKF/pv_microinverter.svg
+[releases]: https://github.com/AdrianoKF/pv_microinverter/releases
