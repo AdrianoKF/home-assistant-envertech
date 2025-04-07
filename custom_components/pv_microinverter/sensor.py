@@ -37,7 +37,7 @@ async def async_setup_entry(
     coordinator: PVMicroinverterDataUpdateCoordinator = hass.data[DOMAIN][
         entry.entry_id
     ]
-    system_id = entry.data["system_id"]
+    station_id = entry.data["station_id"]
 
     entities = []
 
@@ -46,7 +46,7 @@ async def async_setup_entry(
         entities.append(
             PVMicroinverterSensor(
                 coordinator=coordinator,
-                system_id=system_id,
+                station_id=station_id,
                 sensor_type=sensor_key,
                 sensor_info=sensor_info,
             )
@@ -61,7 +61,7 @@ class PVMicroinverterSensor(PVMicroinverterEntity, SensorEntity):
     def __init__(
         self,
         coordinator: PVMicroinverterDataUpdateCoordinator,
-        system_id: dict[str, Any],
+        station_id: str,
         sensor_type: str,
         sensor_info: dict[str, Any],
     ) -> None:
@@ -73,7 +73,7 @@ class PVMicroinverterSensor(PVMicroinverterEntity, SensorEntity):
             sensor_type: The sensor type
             sensor_info: The sensor information
         """
-        super().__init__(coordinator, system_id["station_id"], sensor_type)
+        super().__init__(coordinator, station_id, sensor_type)
 
         self._attr_name = sensor_info["name"]
         self._attr_icon = sensor_info["icon"]
